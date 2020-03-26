@@ -17,11 +17,9 @@ from pathlib import Path
 here = Path(__file__).parent.resolve()
 
 # Get the long description from the README file
-with open(here/'README.md') as f:
-    long_description = f.read()
+long_description = open(str(here/'README.md'), "r").read()
 
-with open(here/'nuxhash'/'version.py') as f:
-    exec(f.read())
+exec(open(str(here/'nuxhash'/'version.py'), "r").read())
 
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
